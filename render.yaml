@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: kaleta-whatsapp-server
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ADMIN_ORIGIN
+        value: https://votre-admin.netlify.app
+    autoDeploy: true
